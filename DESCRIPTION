@@ -1,0 +1,15 @@
+Package: cedma
+Type: Package
+Title: Contribution to the euclidean distance matrix analysis
+Version: 0.1.0
+Authors@R: person("Jaume", "Buxeda i Garrigós", email = "jbuxeda@ub.edu", role = c("aut", "cre"))
+Description: This package contributes to the euclidean distance matrix analysis. It assists at the 
+    data preparation and at the display of the results. From an initial matrix with all landmarks
+    coordinates for the studied individuals, it calculates a new matrix based on the euclidean 
+    distance matrix for all possible pairwise landmarks distances that will be used for further 
+    analysis performed on standard basis. Then, the package assists in the representation of the
+    landmarks for the mean values of defined groups, enabling comparisson among groups.
+License: MIT License
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
