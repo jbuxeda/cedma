@@ -5,26 +5,33 @@
 \title{Prepare the matrix of euclidean distances from the original landmarks
 coordinates.}
 \usage{
-iedma(x, p, k = 2)
+iedma(x, p, k = 0, d = 2)
 }
 \arguments{
 \item{x}{a matrix containing the initial data of landmarks coordinates.}
 
 \item{p}{number of landmarks.}
 
-\item{k}{number of dimensions of the coordinates.}
+\item{k}{number of factors with qualitative information.}
+
+\item{d}{number of dimensions of the coordinates.}
 }
 \value{
 A matrix with the lower triangular matrix of euclidean distance
-  between all ladmarks coordinates for each individual placed in a single row.
+  between all ladmarks coordinates for each individual placed in a single row. If
+  k factors with qualitative information are also imported, factors are place in the
+  k first columns of the new data.frame.
 }
 \description{
 This function assists in the process of importing a file with original
 landmarks coordinates for each studied individuals and transforming these
 data into the lower triangular matrix of euclidean distance between all
-ladmarks coordinates for each individual placed in a single row.
+ladmarks coordinates for each individual placed in a single row. It also allows
+to import qualitative information for each individual resulting in factors in
+the new data.frame.
 }
 \examples{
-new_file <- iedma(original_file, 10)
+new_file_A <- iedma(original_file_A, p = 10)
+new_file_B <- iedma(original_file_B, p = 10, k = 3)
 
 }
