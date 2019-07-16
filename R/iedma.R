@@ -67,9 +67,12 @@
   }
 # -----output the new data.frame-----
   dimnames(varmat) <- list(c(z), c(zz))
-  if (k >0) {
+  if (k > 0) {
+    originallevels <- levels(x[, d + 1])
     for (i in 1:k) {
-      varmat[,i] <- as.factor(varmat[, i])
+      varmat[, i] <- as.factor(varmat[, i])
+      thislevels <- as.numeric(levels(varmat[, i]))
+      varmat[, i] <- factor(varmat[, i], labels = originallevels[thislevels])
     }
   }
   varmat
